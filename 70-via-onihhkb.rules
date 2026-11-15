@@ -1,1 +1,3 @@
+# Oni HHKB (45d4:0021) — WebHID / hidapi access to the VIA raw HID interface
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="45d4", ATTRS{idProduct}=="0021", TAG+="uaccess"
+SUBSYSTEM=="usb",    ATTR{idVendor}=="45d4",  ATTR{idProduct}=="0021",  TAG+="uaccess"
