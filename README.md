@@ -57,10 +57,18 @@ done
 
 ## Backing up the keymap
 
-The board reports 4 layers (layer 0 in use, layers 1-3 all `KC_TRNS`).
-`personalization/onihhkb.minpeter-layout.json` is the live keymap read straight
-off the board over the VIA protocol (protocol version 9), in the same format
-VIA's *Save* produces.
+`personalization/onihhkb.minpeter-layout.json` is the keymap, in the same format
+VIA's *Save* produces. It was exported from VIA and every keycode in it is
+verified to round-trip through `tools/dump_keymap.py`.
+
+4 layers:
+
+| Layer | Reached by | Contents |
+| --- | --- | --- |
+| 0 | — | base. `\` at `0,13`, `Bksp` at `1,13`, `Del` at `0,14`, `MO(1)`/`MO(2)` at `3,13`/`3,14`, `RGB_HUI` at `4,12` |
+| 1 | `MO(1)` | WASD arrows |
+| 2 | `MO(2)` | `F1`-`F12` on the number row, `PrtSc`, `Vol-`/`Vol+`/`Play` |
+| 3 | — | unused |
 
 You do not need a browser or WebHID to re-read it:
 
@@ -70,9 +78,10 @@ You do not need a browser or WebHID to re-read it:
 ./tools/dump_keymap.py --raw      # print the numeric grid
 ```
 
-Known quirk: layer 0 `(row 3, col 14)` holds `0x00C3`, which is not a keycode
-in any QMK release (the 0xC3-0xCC gap in `QK_BASIC`). It is stored as `KC_NO` so
-the file stays importable; `--unknown raw` keeps the raw value instead.
+The tool decodes basic keycodes, `MO`/`TO`/`TG`/`OSL`/`DF`/`LT`, and the
+lighting and magic quantum keycodes under their VIA names (`RGB_HUI`, `RM_HUEU`,
+`BL_TOGG`, ...). Anything it cannot name is written as `KC_NO` and reported on
+stderr; `--unknown raw` keeps the numeric value instead.
 
 ## Notes
 

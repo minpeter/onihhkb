@@ -64,6 +64,75 @@ NAMES = {
     0xE5:"KC_RSFT",  0xE6:"KC_RALT",  0xE7:"KC_RGUI", 
 }
 
+# Quantum keycodes (lighting, magic, grave-esc, ...) under their VIA names.
+QUANTUM = {
+    0x7000:"QK_MAGIC_SWAP_CONTROL_CAPS_LOCK", 0x7001:"QK_MAGIC_UNSWAP_CONTROL_CAPS_LOCK", 0x7002:"QK_MAGIC_TOGGLE_CONTROL_CAPS_LOCK", 0x7003:"QK_MAGIC_CAPS_LOCK_AS_CONTROL_OFF",
+    0x7004:"QK_MAGIC_CAPS_LOCK_AS_CONTROL_ON", 0x7005:"QK_MAGIC_SWAP_LALT_LGUI", 0x7006:"QK_MAGIC_UNSWAP_LALT_LGUI", 0x7007:"QK_MAGIC_SWAP_RALT_RGUI",
+    0x7008:"QK_MAGIC_UNSWAP_RALT_RGUI", 0x7009:"QK_MAGIC_GUI_ON",  0x700A:"QK_MAGIC_GUI_OFF", 0x700B:"MAGIC_TOGGLE_GUI",
+    0x700C:"QK_MAGIC_SWAP_GRAVE_ESC", 0x700D:"QK_MAGIC_UNSWAP_GRAVE_ESC", 0x700E:"QK_MAGIC_SWAP_BACKSLASH_BACKSPACE", 0x700F:"QK_MAGIC_UNSWAP_BACKSLASH_BACKSPACE",
+    0x7010:"QK_MAGIC_TOGGLE_BACKSLASH_BACKSPACE", 0x7011:"QK_MAGIC_NKRO_ON", 0x7012:"QK_MAGIC_NKRO_OFF", 0x7013:"QK_MAGIC_TOGGLE_NKRO",
+    0x7014:"QK_MAGIC_SWAP_ALT_GUI", 0x7015:"QK_MAGIC_UNSWAP_ALT_GUI", 0x7016:"QK_MAGIC_TOGGLE_ALT_GUI", 0x7017:"QK_MAGIC_SWAP_LCTL_LGUI",
+    0x7018:"QK_MAGIC_UNSWAP_LCTL_LGUI", 0x7019:"QK_MAGIC_SWAP_RCTL_RGUI", 0x701A:"QK_MAGIC_UNSWAP_RCTL_RGUI", 0x701B:"QK_MAGIC_SWAP_CTL_GUI",
+    0x701C:"QK_MAGIC_UNSWAP_CTL_GUI", 0x701D:"QK_MAGIC_TOGGLE_CTL_GUI", 0x701E:"QK_MAGIC_EE_HANDS_LEFT", 0x701F:"QK_MAGIC_EE_HANDS_RIGHT",
+    0x7020:"QK_MAGIC_SWAP_ESCAPE_CAPS_LOCK", 0x7021:"QK_MAGIC_UNSWAP_ESCAPE_CAPS_LOCK", 0x7022:"QK_MAGIC_TOGGLE_ESCAPE_CAPS_LOCK", 0x7800:"BL_ON",           
+    0x7801:"BL_OFF",           0x7802:"BL_TOGG",          0x7803:"BL_DEC",           0x7804:"BL_INC",          
+    0x7805:"BL_STEP",          0x7806:"BL_BRTG",          0x7810:"QK_LED_MATRIX_ON", 0x7811:"QK_LED_MATRIX_OFF",
+    0x7812:"QK_LED_MATRIX_TOGGLE", 0x7813:"QK_LED_MATRIX_MODE_NEXT", 0x7814:"QK_LED_MATRIX_MODE_PREVIOUS", 0x7815:"QK_LED_MATRIX_BRIGHTNESS_UP",
+    0x7816:"QK_LED_MATRIX_BRIGHTNESS_DOWN", 0x7817:"QK_LED_MATRIX_SPEED_UP", 0x7818:"QK_LED_MATRIX_SPEED_DOWN", 0x7819:"QK_LED_MATRIX_FLAG_NEXT",
+    0x781A:"QK_LED_MATRIX_FLAG_PREVIOUS", 0x7820:"RGB_TOG",          0x7821:"RGB_MOD",          0x7822:"RGB_RMOD",        
+    0x7823:"RGB_HUI",          0x7824:"RGB_HUD",          0x7825:"RGB_SAI",          0x7826:"RGB_SAD",         
+    0x7827:"RGB_VAI",          0x7828:"RGB_VAD",          0x7829:"RGB_SPI",          0x782A:"RGB_SPD",         
+    0x782B:"RGB_M_PLAIN",      0x782C:"RGB_M_BREATHE",    0x782D:"RGB_M_RAINBOW",    0x782E:"RGB_M_SWIRL",     
+    0x782F:"RGB_M_SNAKE",      0x7830:"RGB_M_KNIGHT",     0x7831:"RGB_M_XMAS",       0x7832:"RGB_M_GRADIENT",  
+    0x7833:"RGB_M_RGBTEST",    0x7834:"RGB_M_TWINKLE",    0x7840:"RM_ON",            0x7841:"RM_OFF",          
+    0x7842:"RM_TOGG",          0x7843:"RM_NEXT",          0x7844:"RM_PREV",          0x7845:"RM_HUEU",         
+    0x7846:"RM_HUED",          0x7847:"RM_SATU",          0x7848:"RM_SATD",          0x7849:"RM_VALU",         
+    0x784A:"RM_VALD",          0x784B:"RM_SPDU",          0x784C:"RM_SPDD",          0x784D:"QK_RGB_MATRIX_FLAG_NEXT",
+    0x784E:"QK_RGB_MATRIX_FLAG_PREVIOUS", 0x7C00:"QK_BOOTLOADER",    0x7C01:"QK_REBOOT",        0x7C02:"QK_DEBUG_TOGGLE", 
+    0x7C03:"QK_CLEAR_EEPROM",  0x7C04:"QK_MAKE",          0x7C10:"QK_AUTO_SHIFT_DOWN", 0x7C11:"QK_AUTO_SHIFT_UP",
+    0x7C12:"QK_AUTO_SHIFT_REPORT", 0x7C13:"QK_AUTO_SHIFT_ON", 0x7C14:"QK_AUTO_SHIFT_OFF", 0x7C15:"QK_AUTO_SHIFT_TOGGLE",
+    0x7C16:"KC_GESC",          0x7C17:"QK_VELOCIKEY_TOGGLE", 0x7C18:"QK_SPACE_CADET_LEFT_CTRL_PARENTHESIS_OPEN", 0x7C19:"QK_SPACE_CADET_RIGHT_CTRL_PARENTHESIS_CLOSE",
+    0x7C1A:"QK_SPACE_CADET_LEFT_SHIFT_PARENTHESIS_OPEN", 0x7C1B:"QK_SPACE_CADET_RIGHT_SHIFT_PARENTHESIS_CLOSE", 0x7C1C:"QK_SPACE_CADET_LEFT_ALT_PARENTHESIS_OPEN", 0x7C1D:"QK_SPACE_CADET_RIGHT_ALT_PARENTHESIS_CLOSE",
+    0x7C1E:"QK_SPACE_CADET_RIGHT_SHIFT_ENTER", 0x7C30:"QK_UNICODE_MODE_NEXT", 0x7C31:"QK_UNICODE_MODE_PREVIOUS", 0x7C32:"QK_UNICODE_MODE_MACOS",
+    0x7C33:"QK_UNICODE_MODE_LINUX", 0x7C34:"QK_UNICODE_MODE_WINDOWS", 0x7C35:"QK_UNICODE_MODE_BSD", 0x7C36:"QK_UNICODE_MODE_WINCOMPOSE",
+    0x7C37:"QK_UNICODE_MODE_EMACS", 0x7C40:"QK_HAPTIC_ON",     0x7C41:"QK_HAPTIC_OFF",    0x7C42:"QK_HAPTIC_TOGGLE",
+    0x7C43:"QK_HAPTIC_RESET",  0x7C44:"QK_HAPTIC_FEEDBACK_TOGGLE", 0x7C45:"QK_HAPTIC_BUZZ_TOGGLE", 0x7C46:"QK_HAPTIC_MODE_NEXT",
+    0x7C47:"QK_HAPTIC_MODE_PREVIOUS", 0x7C48:"QK_HAPTIC_CONTINUOUS_TOGGLE", 0x7C49:"QK_HAPTIC_CONTINUOUS_UP", 0x7C4A:"QK_HAPTIC_CONTINUOUS_DOWN",
+    0x7C4B:"QK_HAPTIC_DWELL_UP", 0x7C4C:"QK_HAPTIC_DWELL_DOWN", 0x7C50:"QK_COMBO_ON",      0x7C51:"QK_COMBO_OFF",    
+    0x7C52:"QK_COMBO_TOGGLE",  0x7C53:"QK_DYNAMIC_MACRO_RECORD_START_1", 0x7C54:"QK_DYNAMIC_MACRO_RECORD_START_2", 0x7C55:"QK_DYNAMIC_MACRO_RECORD_STOP",
+    0x7C56:"QK_DYNAMIC_MACRO_PLAY_1", 0x7C57:"QK_DYNAMIC_MACRO_PLAY_2", 0x7C58:"QK_LEADER",        0x7C59:"QK_LOCK",         
+    0x7C5A:"QK_ONE_SHOT_ON",   0x7C5B:"QK_ONE_SHOT_OFF",  0x7C5C:"QK_ONE_SHOT_TOGGLE", 0x7C5D:"QK_KEY_OVERRIDE_TOGGLE",
+    0x7C5E:"QK_KEY_OVERRIDE_ON", 0x7C5F:"QK_KEY_OVERRIDE_OFF", 0x7C60:"QK_SECURE_LOCK",   0x7C61:"QK_SECURE_UNLOCK",
+    0x7C62:"QK_SECURE_TOGGLE", 0x7C63:"QK_SECURE_REQUEST", 0x7C70:"QK_DYNAMIC_TAPPING_TERM_PRINT", 0x7C71:"QK_DYNAMIC_TAPPING_TERM_UP",
+    0x7C72:"QK_DYNAMIC_TAPPING_TERM_DOWN", 0x7C73:"QK_CAPS_WORD_TOGGLE", 0x7C74:"QK_AUTOCORRECT_ON", 0x7C75:"QK_AUTOCORRECT_OFF",
+    0x7C76:"QK_AUTOCORRECT_TOGGLE", 0x7C77:"QK_TRI_LAYER_LOWER", 0x7C78:"QK_TRI_LAYER_UPPER", 0x7C79:"QK_REPEAT_KEY",   
+    0x7C7A:"QK_ALT_REPEAT_KEY", 0x7C7B:"QK_LAYER_LOCK",   
+}
+
+# Parametric layer keycodes: base value -> (prefix, mask)
+LAYER_KEYS = (
+    (0x5200, 0x521F, 'TO'),
+    (0x5220, 0x523F, 'MO'),
+    (0x5240, 0x525F, 'DF'),
+    (0x5260, 0x527F, 'TG'),
+    (0x5280, 0x529F, 'OSL'),
+)
+
+
+def name(v):
+    """QMK keycode value -> VIA keycode name, or None if unknown."""
+    if v in NAMES:
+        return NAMES[v]
+    if v in QUANTUM:
+        return QUANTUM[v]
+    if 0x4000 <= v <= 0x4FFF:  # LT(layer, kc)
+        inner = NAMES.get(v & 0xFF, '0x%02X' % (v & 0xFF))
+        return 'LT(%d,%s)' % ((v >> 8) & 0x0F, inner)
+    for lo, hi, prefix in LAYER_KEYS:
+        if lo <= v <= hi:
+            return '%s(%d)' % (prefix, v & 0x1F)
+    return None
+
 
 def find_node():
     for h in sorted(glob.glob('/sys/class/hidraw/hidraw*')):
@@ -122,7 +191,7 @@ class Via:
                 vals = [self._raw_keycode(0, 0, c, off) for c in range(4)]
             except (RuntimeError, struct.error):
                 continue
-            if all(v in NAMES for v in vals):
+            if all(name(v) is not None for v in vals):
                 return off
         raise RuntimeError('could not locate the keycode field in the response')
 
@@ -160,8 +229,9 @@ def main():
                 row = [via.keycode(L, r, c) for c in range(COLS)]
                 grid.append(row)
                 for c, v in enumerate(row):
-                    if v in NAMES:
-                        flat.append(NAMES[v])
+                    n = name(v)
+                    if n is not None:
+                        flat.append(n)
                     else:
                         unknown.setdefault(v, []).append((L, r, c))
                         flat.append('0x%04X' % v if args.unknown == 'raw' else 'KC_NO')
@@ -171,7 +241,7 @@ def main():
         via.close()
 
     for v, where in unknown.items():
-        print('WARNING: 0x%04X is not a basic QMK keycode; written as %s (%d site(s), first %s)'
+        print('WARNING: 0x%04X is not a known QMK keycode; written as %s (%d site(s), first %s)'
               % (v, '0x%04X' % v if args.unknown == 'raw' else 'KC_NO',
                  len(where), where[0]), file=sys.stderr)
     if args.raw:
